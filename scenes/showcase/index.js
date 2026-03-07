@@ -71,7 +71,7 @@ socket.onmessage = async event => {
 		if (map?.original) { $('#custom_artist').text(map?.artist ?? data.beatmap.artist); $('#original').css('display', 'flex').css('opacity', 1); }
 		else { $('#custom_artist').text(''); $('#original').css('display', 'none').css('opacity', 0); }
 
-		if (map?.ez_multiplier) { $('#ez_mult').text(`${map?.ez_multiplier.toFixed(2)}x`); $('#ezmult').css('display', 'flex').css('opacity', 1); }
+		if (map?.ez_mult && map?.ez_mult !== 1) { $('#ez_mult').text(`${map?.ez_mult.toFixed(2)}x`); $('#ezmult').css('display', 'flex').css('opacity', 1); }
 		else { $('#ez_mult').text(''); $('#ezmult').css('display', 'none').css('opacity', 0); }
 
 		$('#mapper').text(map?.mapper ?? data.beatmap.mapper);
