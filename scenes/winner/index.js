@@ -1,7 +1,6 @@
-let comingup, teams, mappool;
+let teams, mappool;
 (async () => {
   $.ajaxSetup({ cache: false });
-  comingup = await $.getJSON('../../_data/coming_up.json');
   teams = await $.getJSON('../../_data/teams.json');
   mappool = await $.getJSON('../../_data/beatmaps.json');
   $('#stage').text(mappool.stage);
